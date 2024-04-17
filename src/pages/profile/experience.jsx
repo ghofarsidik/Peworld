@@ -9,6 +9,7 @@ import istagram from "../../components/images/logo/instagram.png";
 import igithub from "../../components/images/logo/github.png";
 import igitlab from "../../components/images/logo/gitlab.png";
 import itokped from "../../components/images/logo/tokped.png";
+import { Link } from "react-router-dom";
 
 function Experience() {
     return (
@@ -47,8 +48,8 @@ function Experience() {
 
                 <div className="w-full md:max-w-[754px] h-fit rounded bg-white flex flex-col p-[30px] mx-auto">
                     <div className="flex space-x-8 mb-6">
-                        <div className="text-[22px] font-semibold py-1 text-abu-pj">Portofolio</div>
-                        <div className="border-b-4 border-ungu-pj text-[22px] font-semibold py-1">Pengalaman Kerja</div>
+                    <Link to="/porto"><div className="text-[22px] font-semibold py-1 text-abu-pj">Portofolio</div> </Link>
+                    <Link to="/experience"><div className="border-b-4 border-ungu-pj text-[22px] font-semibold py-1">Pengalaman Kerja</div></Link>
                     </div>
                     <div className="flex flex-col  ">
                         <div className="flex space-x-6 py-[30px]">

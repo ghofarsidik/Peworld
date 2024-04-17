@@ -14,6 +14,7 @@ import Portofolio3 from "../../components/images/project/project-management.png"
 import Portofolio4 from "../../components/images/project/remainder-app.png";
 import Portofolio5 from "../../components/images/project/social-media-app.png";
 import Portofolio6 from "../../components/images/project/project-management-web.png";
+import { Link } from "react-router-dom";
 
 const Portofolio = () => {
     return (
@@ -53,8 +54,8 @@ const Portofolio = () => {
 
                 <div className="w-full md:max-w-[754px] h-fit rounded bg-white flex flex-col p-[30px] mx-auto">
                     <div className="flex space-x-8 mb-6">
-                        <div className="border-b-4 border-ungu-pj text-[22px] font-semibold py-1">Portofolio</div>
-                        <div className="text-[22px] font-semibold py-1 text-abu-pj">Pengalaman Kerja</div>
+                        <Link to="/porto"><div className="border-b-4 border-ungu-pj text-[22px] font-semibold py-1">Portofolio</div></Link>
+                        <Link to="/experience"><button className="text-[22px] font-semibold py-1 text-abu-pj">Pengalaman Kerja</button></Link>
                     </div>
                     <div className="flex flex-wrap justify-around ">
                         <div className="flex flex-col space-y-2 items-center text-[14px] mb-5">

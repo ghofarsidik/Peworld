@@ -8,6 +8,7 @@ import Harry from "../components/images/people/harry.png"
 import Niall from "../components/images/people/niall.png"
 import Liam from "../components/images/people/liam.png"
 import Skillblock from "../components/base/Skillblock"
+import { Link } from "react-router-dom"
 
 function home() {
     return (
@@ -37,9 +38,10 @@ function home() {
                                 <Skillblock>HTML</Skillblock>
                             </div>
                         </div>
-                        <div className="border rounded bg-ungu-pj text-white p-5 w-[148] h-14 mr-20 flex items-center">
+                        <Link to="/porto" > <div className="border rounded bg-ungu-pj text-white p-5 w-[148] h-14 mr-20 flex items-center">
                             Lihat Profile
                         </div>
+                        </Link>
                     </div>
 
 
@@ -55,9 +57,9 @@ function home() {
                                 <Skillblock>HTML</Skillblock>
                             </div>
                         </div>
-                        <div className="border rounded bg-ungu-pj text-white p-5 w-[148] h-14 mr-20 flex items-center">
+                        <Link to="/porto" > <button className="border rounded bg-ungu-pj text-white p-5 w-[148] h-14 mr-20 flex items-center">
                             Lihat Profile
-                        </div>
+                        </button></Link>
                     </div>
 
 

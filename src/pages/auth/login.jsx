@@ -27,9 +27,9 @@ const Login = () => {
       }
     })
       .then((res) => {
-        const { token, refreshToken } = res.data.data
-        localStorage.setItem('token', token)
-        localStorage.setItem('resfreshToken', refreshToken)
+        // const { token, refreshToken } = res.data.data
+        // localStorage.setItem('token', token);
+        // localStorage.setItem('resfreshToken', refreshToken);
         navigate('/home')
       })
       .catch((err) => {

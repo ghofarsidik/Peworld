@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 function Button({ label, className, onClick }) {
     return (
-        <button className={`text-white bg-[#FBB017] rounded h-[50px] mt-[24px] ${className}`} onClick={onClick} >{label}</button>
+        <button className={`${className} text-white bg-[#FBB017] rounded h-[50px] mt-[24px] `} onClick={onClick} >{label}</button>
     )
 }
 
