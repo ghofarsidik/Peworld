@@ -12,7 +12,8 @@ import Landingpage from './pages/landingpage.jsx';
 import Hire from './pages/hire.jsx';
 import ProfileCompany from './pages/profile/profilecompany.jsx';
 import EditProfileCompany from './pages/profile/editprofilecompany.jsx';
-import Experience from './pages/profile/experience.jsx';
+import Profile from './pages/profile/profile.jsx';
+// import Home2 from './pages/home-coba.jsx'
 
 
 const App = () => {
@@ -31,7 +32,9 @@ const App = () => {
       <Route path="/hire" element={<Hire/>} /> 
       <Route path="/profilecompany" element={<ProfileCompany />} />
       <Route path="/editprofilecompany" element={<EditProfileCompany />} />
-      <Route path="/experience" element={<Experience />} />
+      <Route path="/profile/:id" element={<Profile />} />
+      
+      {/* <Route path="/home2" element={<Home2 />} /> */}
       
     {/* </Route> */}
   </Routes>

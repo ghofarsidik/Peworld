@@ -4,10 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import api from "../../configs/api";
 import Input from "../../components/base/Input";
+import { unwrapResult } from "@reduxjs/toolkit";
+import { useDispatch, useSelector } from "react-redux";
+import {login} from '../../feature/users/usersSlice'
 
 const Login = () => {
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const {loading} = useSelector ((state)=>state.users)
   // const [email, setEmail] = useState('')
   // const [password, setPassword] = useState('')
   const [form, setForm] = useState({
@@ -15,27 +20,40 @@ const Login = () => {
     password: "",
   });
 
+  const handleLogin = async(e)=>{
+    try {
+      e.preventDefault()
+      const response = await dispatch(login(form))
+      const result = unwrapResult(response)
+      const user = result.data
+      navigate('/home')
+      
+    } catch (error) {
+      alert(error)
+    }
+}
 
-  const handleLogin = (e) => {
-    e.preventDefault()
-    api({
-      method: 'POST',
-      url: `/auth/login`,
-      data: {
-        email: form.email,
-        password: form.password
-      }
-    })
-      .then((res) => {
-        // const { token, refreshToken } = res.data.data
-        // localStorage.setItem('token', token);
-        // localStorage.setItem('resfreshToken', refreshToken);
-        navigate('/home')
-      })
-      .catch((err) => {
-        console.log(err.response);
-      })
-  }
+
+  // const handleLogin = (e) => {
+  //   e.preventDefault()
+  //   api({
+  //     method: 'POST',
+  //     url: `/auth/login`,
+  //     data: {
+  //       email: form.email,
+  //       password: form.password
+  //     }
+  //   })
+  //     .then((res) => {
+  //       // const { token, refreshToken } = res.data.data
+  //       // localStorage.setItem('token', token);
+  //       // localStorage.setItem('resfreshToken', refreshToken);
+  //       navigate('/home')
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.response);
+  //     })
+  // }
   const handleChange = (e) => {
     setForm({
       ...form,

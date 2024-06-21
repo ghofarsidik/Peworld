@@ -4,10 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import Input from "../../../components/base/Input";
 import Button from "../../../components/base/Button";
 import { useState } from "react";
-import api from "../../../configs/api";
+// import api from "../../../configs/api";
+import { useDispatch, useSelector } from "react-redux";
+import { register } from "../../../feature/users/usersSlice";
+import { unwrapResult } from "@reduxjs/toolkit";
 
 function Worker() {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const { loading} = useSelector((state)=>state.users)
 
     const [form, setForm] = useState({
         email: '',
@@ -16,22 +21,38 @@ function Worker() {
         phone: ''
     })
 
-    const handleRegister = () => {
-        api.post('/workers/register', {
-            email: form.email,
-            password: form.password,
-            name: form.name,
-            phone: form.phone
-        })
-            .then((res) => {
-                alert('selamat berhasil login')
-                navigate('/login')
-            })
-            .catch((err) => {
-                console.log(err.response);
-                alert('anda gagal register')
-            })
+
+    const handleRegister = async(e) => {
+        try {
+            e.preventDefault()
+            const response = await dispatch(register(form))
+            const user = unwrapResult(response)
+            navigate('/login')
+
+        } catch (error) {
+            alert (error)
+        }
     }
+
+
+
+
+    // const handleRegister = () => {
+    //     api.post('/workers/register', {
+    //         email: form.email,
+    //         password: form.password,
+    //         name: form.name,
+    //         phone: form.phone
+    //     })
+    //         .then((res) => {
+    //             alert('selamat berhasil login')
+    //             navigate('/login')
+    //         })
+    //         .catch((err) => {
+    //             console.log(err.response);
+    //             alert('anda gagal register')
+    //         })
+    // }
 
     const handleChange = (e) => {
         setForm({
