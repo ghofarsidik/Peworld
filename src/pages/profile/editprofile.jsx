@@ -21,8 +21,6 @@ const EditProfile = () => {
     description: '',
   });
   const [skills, setSkills] = useState([]);
-  const [experiences, setExperiences] = useState([]);
-  // const [selectedOption, setSelectedOption] = useState('');
 
   useEffect(() => {
     const getProfile = async () => {
@@ -74,16 +72,24 @@ const EditProfile = () => {
     }
   };
 
-  const handleExperienceAdded = (newExperience) => {
-    setExperiences([...experiences, newExperience]);
-  };
-
   const handleChange = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
+
+  const handleAddSkill = async (newSkill) => {
+    try {
+        const response = await api.post("/skills", { skill_name: newSkill }); 
+        console.log("Skill added:", response.data);
+        alert("Keterampilan berhasil ditambahkan");
+        setSkills([...skills, response.data.data.skill_name]);
+    } catch (error) {
+        console.error("Error adding skill:", error);
+        alert("Gagal menambahkan keterampilan");
+    }
+};
 
   return (
     <div className="max-w-[1440px] mx-auto bg-abu-bg -z-20">
@@ -94,9 +100,9 @@ const EditProfile = () => {
         <div className="w-full md:max-w-[754px] h-fit mx-auto">
           <EditProfileData form={form} handleChange={handleChange} />
 
-          <ProfileSkillList skills={skills} />
+          <ProfileSkillList skills={skills} onAddSkill={handleAddSkill} />
 
-          <ProfileExperience onExperienceAdded={handleExperienceAdded}/>
+          <ProfileExperience />
 
           <ProfilePortofolio />
         </div>

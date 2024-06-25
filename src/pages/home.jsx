@@ -60,11 +60,11 @@ function Home() {
     };
 
     return (
-        <div className="max-w-[1440px] mx-auto h-[1440px] bg-abu-bg">
+        <div className="max-w-[1440px] mx-auto h-[1440px]">
             <Navbar />
             <Tjbar />
             <div className="">
-                <div className="m-9 max-w-[1140px] h-[70px] font-Osans flex items-center justify-end px-1 py-[7px] bg-white mx-auto ">
+                <div className="m-9 max-w-[1140px] h-[70px] font-Osans flex items-center justify-end px-1 py-[7px] bg-white mx-auto shadow-xl">
                     <input
                         className="px-[18px] h-[54px] flex-grow"
                         type="text"

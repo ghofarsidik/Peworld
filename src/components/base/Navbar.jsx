@@ -15,10 +15,11 @@ const Navbar = ({ className }) => {
   useEffect(() => {
     // Coba mengambil token dari localStorage saat komponen di-render
     const token = localStorage.getItem('token');
-    setToken(token);
-    console.log(jwtDecode(token));
-
-  }, []);
+    if (typeof token === 'string') {
+        setToken(token);
+        console.log(jwtDecode(token));
+    }
+}, []);
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -34,7 +35,7 @@ const Navbar = ({ className }) => {
 
   return (
     <nav className={`flex max-w-[1440px] h-[100px] justify-between items-center mx-auto my-auto py-5 ${token ? 'px-[150px]' : 'px-[30px] md:px-[150px]'} bg-white ${className} shadow-lg`}>
-      <NavLink to="/"><img src={logo} alt="logo" className='w-32 h-9' /></NavLink>
+      <NavLink to="/home"><img src={logo} alt="logo" className='w-32 h-9' /></NavLink>
       <ul className='flex items-center'>
         {token ? (
           <>
