@@ -26,7 +26,7 @@ const Login = () => {
       const response = await dispatch(login(form))
       const result = unwrapResult(response)
       const user = result.data
-      navigate('/home')
+      navigate('/')
       
     } catch (error) {
       alert(error)

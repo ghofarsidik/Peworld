@@ -1,4 +1,4 @@
-import Navbaral from "../../components/base/Navbaral";
+import Navbar from "../../components/base/Navbar";
 import Footer from "../../components/base/Footer";
 import ProfileCard from "../../components/module/profileCard";
 import { useEffect, useState } from "react";
@@ -6,6 +6,7 @@ import api from "../../configs/api";
 import Portofolio from "./portofolio";
 import Experience from "./experience";
 import { useParams } from "react-router-dom";
+import noUser from "../../components/images/logo/user.svg"
 
 const Profile = () => {
   const { id } = useParams();
@@ -36,17 +37,17 @@ const Profile = () => {
 
   return (
     <div className="max-w-[1440px] mx-auto bg-gradient-to-b from-ungu-pj to-white">
-      <Navbaral />
+      <Navbar />
       <div className="flex flex-col md:flex-row max-w-[1140px] mx-auto mt-[70px] space-y-[30px] md:space-y-0 md:space-x-[30px] font-Osans p-[30px] md:p-0">
         <ProfileCard
-          image={profile.photo}
+          image={profile.photo || noUser}
           name={profile.name}
-          job_desk={profile.job_desk}
-          domicile={profile.domicile}
-          workPlace={profile.workPlace}
-          description={profile.description}
+          job_desk={profile.job_desk || "job desk belum di input"}
+          domicile={profile.domicile || "domisili belum di input"}
+          workPlace={profile.workPlace || "Tempat kerja belum di input"          }
+          description={profile.description || "Deskripsi belum di input"}
           skills={profile.skills}
-          email={profile.email}
+          email={profile.email || "email belum di input"}
         />
 
         <div className="w-full md:max-w-[754px] h-fit rounded bg-white flex flex-col p-[30px] mx-auto">

@@ -4,9 +4,7 @@ import Footer from "../components/base/Footer"
 import isearch from "../components/images/logo/search.png"
 import imap from "../components/images/logo/map-pin.png"
 import Louis from "../components/images/people/louis.png"
-// import Harry from "../components/images/people/harry.png"
-// import Niall from "../components/images/people/niall.png"
-// import Liam from "../components/images/people/liam.png"
+
 import Skillblock from "../components/base/Skillblock"
 import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -39,10 +37,7 @@ function Home() {
     })
 
 
-
-
-
-
+    
     return (
         <div className="max-w-[1440px] mx-auto h-[1440px]  bg-abu-bg" >
             <Navbaral />
