@@ -1,11 +1,6 @@
 <br />
   <div align="center">
     <h1>Peworld</h1> 
-  
-  
-    <a href="">Demo Aplikasi</a>
-    .
-    <a href="">Demo API</a>
   </div>
 
   ## Daftar isi
