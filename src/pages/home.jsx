@@ -10,7 +10,6 @@ import PaginationButton from "../components/base/PaginationButton";
 const sortOptions = [
     { label: "Name A-Z", value: "name", sortBy: "ASC" },
     { label: "Name Z-A", value: "name", sortBy: "DESC" },
-    { label: "Job Desk", value: "job_desk", sortBy: "ASC" },
     { label: "Domicile", value: "domicile", sortBy: "ASC" }
 ];
 

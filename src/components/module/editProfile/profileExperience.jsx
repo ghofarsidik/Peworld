@@ -157,11 +157,11 @@ const ProfileExperience = () => {
         {experiences.length > 0 ? (
           experiences.map((exp, index) => (
             <div key={index} className="flex">
-              <div
-                className="p-2 border-b border-abu-pj cursor-pointer flex-grow"
-                onClick={() => handleToggleExpand(index)}
-              >
-                <div className="font-bold flex">
+              <div className="p-2 border-b border-abu-pj cursor-pointer flex-grow">
+                <div
+                  className="font-bold flex"
+                  onClick={() => handleToggleExpand(index)}
+                >
                   <p className="flex-grow">Posisi: {exp.position}</p>
                   <FontAwesomeIcon
                     icon={
@@ -172,28 +172,27 @@ const ProfileExperience = () => {
                 </div>
                 {expandedExperience === index && (
                   <div className="flex">
-                  <div className="mt-2 flex-grow">
-                    <p>
-                      <strong>Perusahaan:</strong> {exp.company}
-                    </p>
-                    <p>
-                      <strong>Bulan/Tahun:</strong> {exp.work_month} /{" "}
-                      {exp.work_year}
-                    </p>
-                    <p>
-                      <strong>Deskripsi:</strong> {exp.description}
-                    </p>
-                  </div>
-                  <button
-                className="text-red-600 text-[12px]"
-                onClick={() => handleDeleteExperience(index)}
-              >
-                Delete
-              </button>
+                    <div className="mt-2 flex-grow">
+                      <p>
+                        <strong>Perusahaan:</strong> {exp.company}
+                      </p>
+                      <p>
+                        <strong>Bulan/Tahun:</strong> {exp.work_month} /{" "}
+                        {exp.work_year}
+                      </p>
+                      <p>
+                        <strong>Deskripsi:</strong> {exp.description}
+                      </p>
+                    </div>
+                    <button
+                      className="text-red-600 text-[12px]"
+                      onClick={() => handleDeleteExperience(index)}
+                    >
+                      Delete
+                    </button>
                   </div>
                 )}
               </div>
-              
             </div>
           ))
         ) : (
