@@ -12,7 +12,7 @@ const displaySkills = skills ? skills.slice(0, 3) : [];
   return (
     <>
     <div key={index} className="bg-white h-56 flex items-center border">
-                        <div><img className="h-[100px] w-[100px] mx-5" src={image || noUser} alt="" /></div>
+                        <div><img className="h-[100px] w-[100px] mx-5 object-cover" src={image || noUser} alt="" /></div>
                         <div className="leading-8 flex-grow">
                             <p className="font-semibold text-[22px]">{name}</p>
                             <p className="text-[14px] text-abu-pj">{job || "job desk belum di input"}</p>

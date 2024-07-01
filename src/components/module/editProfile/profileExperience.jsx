@@ -4,12 +4,14 @@ import Input from "../../base/Input";
 import Button from "../../base/Button";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { setYear, setMonth, getYear, getMonth } from "date-fns";
+import { setYear, setMonth, getYear, getMonth, format } from "date-fns";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import ConfirmDialog from "../../base/ConfirmDialog"; // Import ConfirmDialog
 
 const ProfileExperience = () => {
   const [experience, setExperience] = useState({
+    id: null,
     position: "",
     company: "",
     work_month: "",
@@ -18,6 +20,9 @@ const ProfileExperience = () => {
   });
   const [experiences, setExperiences] = useState([]);
   const [expandedExperience, setExpandedExperience] = useState(null);
+  const [isEditing, setIsEditing] = useState(false); // State untuk melacak apakah sedang dalam mode edit
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false); // State untuk menampilkan dialog konfirmasi
+  const [deleteIndex, setDeleteIndex] = useState(null); // State untuk menyimpan index yang akan dihapus
 
   useEffect(() => {
     getExperiences();
@@ -60,6 +65,7 @@ const ProfileExperience = () => {
       alert("Pengalaman kerja berhasil ditambahkan");
       setExperiences([...experiences, response.data.data]);
       setExperience({
+        id: null,
         position: "",
         company: "",
         work_month: "",
@@ -72,23 +78,73 @@ const ProfileExperience = () => {
     }
   };
 
-  const handleDeleteExperience = async (index) => {
+  const handleEditExperience = async () => {
     try {
-      const deletedExperience = experiences[index];
-      // Panggil API untuk menghapus pengalaman berdasarkan ID
-      await api.delete(`/experience/${deletedExperience.id}`);
-
-      // Setelah pengalaman dihapus dari backend, update state lokal
-      const updatedExperiences = experiences.filter((exp, i) => i !== index);
+      const response = await api.put(`/experience/${experience.id}`, {
+        position: experience.position,
+        company: experience.company,
+        work_month: String(experience.work_month),
+        work_year: String(experience.work_year),
+        description: experience.description,
+      });
+      console.log("Experience updated:", response.data.data);
+      alert("Pengalaman kerja berhasil diperbarui");
+      const updatedExperiences = experiences.map((exp) =>
+        exp.id === experience.id ? response.data.data : exp
+      );
       setExperiences(updatedExperiences);
+      setExperience({
+        id: null,
+        position: "",
+        company: "",
+        work_month: "",
+        work_year: "",
+        description: "",
+      });
+      setIsEditing(false);
+    } catch (error) {
+      console.error("Error updating experience:", error);
+      alert("Gagal memperbarui pengalaman kerja");
+    }
+  };
+
+  const handleDeleteExperience = async () => {
+    try {
+      const deletedExperience = experiences[deleteIndex];
+      await api.delete(`/experience/${deletedExperience.id}`);
+      const updatedExperiences = experiences.filter((exp, i) => i !== deleteIndex);
+      setExperiences(updatedExperiences);
+      setShowConfirmDialog(false); // Tutup dialog konfirmasi setelah menghapus
     } catch (error) {
       console.error("Error deleting experience:", error);
       alert("Gagal menghapus pengalaman");
     }
   };
 
+  const handleDeleteClick = (index) => {
+    setDeleteIndex(index);
+    setShowConfirmDialog(true); // Tampilkan dialog konfirmasi
+  };
+
+  const handleEditClick = (exp) => {
+    setExperience({
+      id: exp.id,
+      position: exp.position,
+      company: exp.company,
+      work_month: exp.work_month,
+      work_year: exp.work_year,
+      description: exp.description,
+    });
+    setIsEditing(true);
+  };
+
   const handleToggleExpand = (index) => {
     setExpandedExperience(expandedExperience === index ? null : index);
+  };
+
+  const formatMonth = (month) => {
+    const date = setMonth(new Date(), month - 1);
+    return format(date, "MMMM");
   };
 
   return (
@@ -146,9 +202,9 @@ const ProfileExperience = () => {
           placeholder="Masukkan deskripsi pekerjaan anda"
         />
         <Button
-          label="Tambah pengalaman kerja"
+          label={isEditing ? "Edit Pengalaman Kerja" : "Tambah Pengalaman Kerja"}
           className="border-orange-pj border "
-          onClick={handleAddExperience}
+          onClick={isEditing ? handleEditExperience : handleAddExperience}
         />
       </div>
 
@@ -177,19 +233,27 @@ const ProfileExperience = () => {
                         <strong>Perusahaan:</strong> {exp.company}
                       </p>
                       <p>
-                        <strong>Bulan/Tahun:</strong> {exp.work_month} /{" "}
-                        {exp.work_year}
+                        <strong>Bulan/Tahun:</strong>{" "}
+                        {formatMonth(exp.work_month)} {exp.work_year}
                       </p>
                       <p>
                         <strong>Deskripsi:</strong> {exp.description}
                       </p>
                     </div>
-                    <button
-                      className="text-red-600 text-[12px]"
-                      onClick={() => handleDeleteExperience(index)}
-                    >
-                      Delete
-                    </button>
+                    <div>
+                      <button
+                        className="text-orange-pj text-[16px]"
+                        onClick={() => handleEditClick(exp)}
+                      >
+                        Ubah
+                      </button>
+                      <button
+                        className="text-red-600 text-[16px]"
+                        onClick={() => handleDeleteClick(index)}
+                      >
+                        Hapus
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
@@ -199,8 +263,17 @@ const ProfileExperience = () => {
           <p>Belum ada pengalaman kerja.</p>
         )}
       </div>
+
+      {showConfirmDialog && (
+        <ConfirmDialog
+          message="Yakin ingin menghapus pengalaman kerja ini?"
+          onConfirm={handleDeleteExperience}
+          onCancel={() => setShowConfirmDialog(false)}
+        />
+      )}
     </div>
   );
 };
 
 export default ProfileExperience;
+

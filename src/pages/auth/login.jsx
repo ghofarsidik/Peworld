@@ -63,7 +63,7 @@ const Login = () => {
 
 
   return (
-    <div className="max-w-[1440px] h-[900px] flex mx-auto ">
+    <div className="w-screen h-[900px] flex mx-auto ">
       <div className="hidden w-1/2 relative h-100% lg:flex flex-col border bg-slate-400 " >
         <img className="relatif h-full w-full object-cover z-1" src={Photo} />
         <div className="absolute h-full w-full bg-ungu-pj bg-opacity-80 z-2"></div>

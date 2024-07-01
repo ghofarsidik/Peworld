@@ -4,16 +4,21 @@ import Button from "../../base/Button";
 import api from "../../../configs/api";
 import { faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ConfirmDialog from "../../base/ConfirmDialog"; // Import ConfirmDialog
 
 const ProfilePortfolio = () => {
   const [portfolios, setPortfolios] = useState([]);
   const [expandedPortfolio, setExpandedPortfolio] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
   const [PortofolioData, setPortofolioData] = useState({
+    id: null,
     application: "",
     application_name: "",
     image: "",
     link_repository: "",
   });
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false); // State untuk menampilkan dialog konfirmasi
+  const [deleteIndex, setDeleteIndex] = useState(null); // State untuk menyimpan index yang akan dihapus
 
   useEffect(() => {
     const getPortofolios = async () => {
@@ -69,11 +74,17 @@ const ProfilePortfolio = () => {
 
   const handleAddPortofolio = async () => {
     try {
-      const response = await api.post("/portfolio", PortofolioData);
+      const response = await api.post("/portfolio", {
+        application: PortofolioData.application,
+        application_name: PortofolioData.application_name,
+        image: PortofolioData.image,
+        link_repository: PortofolioData.link_repository,
+      });
       console.log("Portofolio added:", response.data.data);
       alert("Portofolio berhasil ditambahkan");
       setPortfolios([...portfolios, response.data.data]);
       setPortofolioData({
+        id: null,
         application: "",
         application_name: "",
         image: "",
@@ -85,16 +96,61 @@ const ProfilePortfolio = () => {
     }
   };
 
-  const handleDeletePortfolio = async (index) => {
+  const handleEditPortofolio = async () => {
     try {
-      const deletedPortfolio = portfolios[index];
+      const response = await api.put(`/portfolio/${PortofolioData.id}`, {
+        application: PortofolioData.application,
+        application_name: PortofolioData.application_name,
+        image: PortofolioData.image,
+        link_repository: PortofolioData.link_repository,
+      });
+      console.log("Portofolio updated:", response.data.data);
+      alert("Portofolio berhasil diperbarui");
+      const updatedPortfolios = portfolios.map((portfolio) =>
+        portfolio.id === PortofolioData.id ? response.data.data : portfolio
+      );
+      setPortfolios(updatedPortfolios);
+      setPortofolioData({
+        id: null,
+        application: "",
+        application_name: "",
+        image: "",
+        link_repository: "",
+      });
+      setIsEditing(false);
+    } catch (error) {
+      console.error("Error updating portofolio:", error);
+      alert("Gagal memperbarui portofolio");
+    }
+  };
+
+  const handleDeletePortfolio = async () => {
+    try {
+      const deletedPortfolio = portfolios[deleteIndex];
       await api.delete(`/portfolio/${deletedPortfolio.id}`);
-      const updatedPortfolio = portfolios.filter((portfolio, i) => i !== index);
+      const updatedPortfolio = portfolios.filter((portfolio, i) => i !== deleteIndex);
       setPortfolios(updatedPortfolio);
+      setShowConfirmDialog(false); // Tutup dialog konfirmasi setelah menghapus
     } catch (error) {
       console.error("Error deleting portfolio:", error);
       alert("Gagal menghapus portofolio");
     }
+  };
+
+  const handleDeleteClick = (index) => {
+    setDeleteIndex(index);
+    setShowConfirmDialog(true); // Tampilkan dialog konfirmasi
+  };
+
+  const handleEditClick = (portfolio) => {
+    setPortofolioData({
+      id: portfolio.id,
+      application: portfolio.application,
+      application_name: portfolio.application_name,
+      image: portfolio.image,
+      link_repository: portfolio.link_repository,
+    });
+    setIsEditing(true);
   };
 
   return (
@@ -165,9 +221,9 @@ const ProfilePortfolio = () => {
           )}
         </div>
         <Button
-          label="Tambah portofolio"
-          className="border-orange-pj border"
-          onClick={handleAddPortofolio}
+          onClick={isEditing ? handleEditPortofolio : handleAddPortofolio}
+          className="mt-4"
+          label ={isEditing ? "Edit Portofolio" : "Tambah Portofolio"}
         />
       </div>
 
@@ -193,12 +249,31 @@ const ProfilePortfolio = () => {
             {expandedPortfolio === index && (
               <div className="mt-2">
                 <div>
-                  <p className="flex">
-                    <span>Link Repository:</span> {portfolio.link_repository}
-                  </p>
-                  <p className="flex">
-                    <span>Tipe: </span> {portfolio.application}
-                  </p>
+                  <div className="flex">
+                    <div className="flex-grow">
+                      <p className="flex">
+                        <span>Link Repository:</span>{" "}
+                        {portfolio.link_repository}
+                      </p>
+                      <p className="flex">
+                        <span>Tipe: </span> {portfolio.application}
+                      </p>
+                    </div>
+                    <div className="flex flex-col">
+                      <button
+                        className="text-blue-500"
+                        onClick={() => handleEditClick(portfolio)}
+                      >
+                        Ubah
+                      </button>
+                      <button
+                        className="text-red-600"
+                        onClick={() => handleDeleteClick(index)}
+                      >
+                        Hapus
+                      </button>
+                    </div>
+                  </div>
                   {portfolio.image && (
                     <img
                       src={portfolio.image}
@@ -206,20 +281,22 @@ const ProfilePortfolio = () => {
                       className="max-h-full max-w-full mt-2"
                     />
                   )}
-                  <button
-                    className="text-red-600 text-[12px]"
-                    onClick={() => handleDeletePortfolio(index)}
-                  >
-                    Delete
-                  </button>
                 </div>
               </div>
             )}
           </div>
         ))}
       </div>
+
+      {showConfirmDialog && (
+        <ConfirmDialog
+          message="Yakin ingin menghapus portofolio ini?"
+          onConfirm={handleDeletePortfolio}
+          onCancel={() => setShowConfirmDialog(false)}
+        />
+      )}
     </div>
   );
-}
+};
 
 export default ProfilePortfolio;

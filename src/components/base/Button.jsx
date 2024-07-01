@@ -7,7 +7,7 @@ function Button({ label, className, onClick }) {
 }
 
 Button.propTypes = {
-    label: PropTypes.string.isRequired, // Label harus bertipe string dan wajib ada
+    label: PropTypes.string.isRequired, 
     className: PropTypes.string,
     onClick: PropTypes.func,
 };

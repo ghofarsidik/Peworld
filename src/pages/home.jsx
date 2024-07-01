@@ -6,12 +6,15 @@ import { useEffect, useState } from "react";
 import api from "../configs/api";
 import Card from "../components/base/Card";
 import PaginationButton from "../components/base/PaginationButton";
+import 'react-loading-skeleton/dist/skeleton.css';
+import CardSkeleton from "../components/module/CardSkeleton";
 
 const sortOptions = [
     { label: "Name A-Z", value: "name", sortBy: "ASC" },
     { label: "Name Z-A", value: "name", sortBy: "DESC" },
     { label: "Domicile", value: "domicile", sortBy: "ASC" }
 ];
+
 
 function Home() {
     const [profile, setProfile] = useState([]);
@@ -21,9 +24,11 @@ function Home() {
     const [sort, setSort] = useState("");
     const [sortBy, setSortBy] = useState("ASC");
     const [isSortDropdownOpen, setIsSortDropdownOpen] = useState(false);
+    const [loading, setLoading] = useState(true); // State untuk melacak status pemuatan
 
     const getProfile = async (page) => {
         try {
+            setLoading(true); // Set loading ke true saat memulai permintaan data
             const response = await api.get(`workers/?search=${searchInput}&sort=${sort}&sortBy=${sortBy}&page=${page}`);
             const data = response.data.data;
             const pagination = response.data.pagination;
@@ -33,6 +38,8 @@ function Home() {
             setTotalPages(pagination.totalPage);
         } catch (err) {
             console.log("Error get profile data: ", err);
+        } finally {
+            setLoading(false); // Set loading ke false setelah data dimuat
         }
     };
 
@@ -59,7 +66,7 @@ function Home() {
     };
 
     return (
-        <div className="max-w-[1440px] mx-auto h-[1440px]">
+        <div className="w-screen mx-auto h-[1440px]">
             <Navbar />
             <Tjbar />
             <div className="">
@@ -115,7 +122,11 @@ function Home() {
                 
 
                 <div className="max-w-[1140px] h-fit mt-[50px] bg-gray-500 mx-auto flex flex-col font-Osans">
-                    {profile.length > 0 ? (
+                    {loading ? (
+                        Array.from({ length: 5 }).map((_, index) => (
+                            <CardSkeleton key={index} />
+                        ))
+                    ) : profile.length > 0 ? (
                         profile.map((item, index) => (
                             <Card key={index} id={item.id} image={item.photo} name={item.name} job={item.job_desk} domicile={item.domicile} skills={item.skills} />
                         ))
