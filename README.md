@@ -18,9 +18,9 @@
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Screenshots](#screenshots)
-- [Contributors](#contributors)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -347,7 +347,8 @@ For any inquiries or questions, you can reach me at:
 
 ### Documentation
 
-The backend project was created by [Muhammad Risano](https://github.com/muhammadrisano) using Express.js. For the backend link, you can visit [Be_Peworld](https://github.com/ghofarsidik/Be_Peworld).
+The backend project was created by [Muhammad Risano](https://github.com/muhammadrisano) using Express.js. For the backend link, you can visit [Backend Peworld](https://github.com/ghofarsidik/Be_Peworld).
 
 
 ### Related Project
+:rocket: [`Backend - Peworld`](https://github.com/ghofarsidik/Be_Peworld)
