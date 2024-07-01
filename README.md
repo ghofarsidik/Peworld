@@ -52,6 +52,7 @@ Make sure you have the following installed on your local machine:
 
 - Node.js
 - npm (Node Package Manager)
+- Git
 
 ### Installation
 
@@ -76,32 +77,206 @@ Make sure you have the following installed on your local machine:
 4. **Start the development server:**
 
    ```sh
-   npm run dev
+   npm start
    ```
 
-   
+   The application should now be running on `http://localhost:3000`.
 
 ### Screenshots
 
 Here is the screen display of the Peworld:
+
 <table>
   <tr>
+    <td><strong>Landing Page Before Login</strong></td>
+  </tr>
+  <tr>
     <td>
-      <button onclick="toggleImage()">Show Image</button>
-      <img id="screenshot" src="https://github.com/ghofarsidik/Peworld/blob/65f3d7f14e2bc24f66753f9b14f50830ce7c0f2c/src/components/images/screenshot/Landing%20Page%20before%20Login.png" width="350" style="display:none;"/>
-      <script>
-        function toggleImage() {
-          const img = document.getElementById('screenshot');
-          const button = document.querySelector('button');
-          if (img.style.display === 'none') {
-            img.style.display = 'block';
-            button.textContent = 'Hide Image';
-          } else {
-            img.style.display = 'none';
-            button.textContent = 'Show Image';
-          }
-        }
-      </script>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Landing%20Page%20before%20Login.png" alt="Landing Page Before Login">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Landing Page After Login</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/landing%20Page%20After%20login.png" alt="Landing Page After Login">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Login</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Login.png" alt="Login">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Register Worker</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Register%20Worker.png" alt="Register Worker">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Register Recruiter</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Register%20Recruiter.png" alt="Register Recruiter">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Profile Worker + Portfolio</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20worker%20%2B%20portofolio.png" alt="Profile Worker + Portfolio">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Profile Worker + Experience</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20worker%20%2B%20experience.png" alt="Profile Worker + Experience">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Edit Profile Worker</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/edit%20profile%20worker.png" alt="Edit Profile Worker">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Profile Recruiter</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20recruiter.png" alt="Profile Recruiter">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Edit Profile Recruiter</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/edit%20profile%20recruiter.png" alt="Edit Profile Recruiter">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Home</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Home.png" alt="Home">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Detail Profile + Portfolio from Worker</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20and%20portofolio%20from%20worker.png" alt="Detail Profile + Portfolio from Worker">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Detail Profile + Experience from Worker</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20and%20experience%20from%20worker.png" alt="Detail Profile + Experience from Worker">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Detail Profile + Portfolio from Recruiter</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20%2B%20portofolio%20from%20recruiter.png">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Detail Profile + Experience from Recruiter</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20%2B%20experience%20from%20recruiter.png">
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Hire</strong></td>
+  </tr>
+  <tr>
+    <td>
+      <details>
+        <summary>Show/Hide Image</summary>
+        <br>
+        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/hire.png" alt="Hire">
+      </details>
     </td>
   </tr>
 </table>
