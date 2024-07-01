@@ -74,13 +74,21 @@ Make sure you have the following installed on your local machine:
    npm install
    ```
 
-4. **Start the development server:**
+4. **Add environment variable:**
+
+   Create a `.env` file in the root directory and add the following line:
+
+   ```sh
+   VITE_API_URL=
+   ```
+
+5. **Start the development server:**
 
    ```sh
    npm start
    ```
 
-   The application should now be running on `http://localhost:3000`.
+
 
 ### Screenshots
 
@@ -281,32 +289,65 @@ Here is the screen display of the Peworld:
   </tr>
 </table>
 
-### Backend Setup
+### Contributing
 
-To set up the backend, follow the instructions in the [Backend Repository](https://github.com/muhammadrisano/fwm17-be-peword.git).
+If you would like to contribute to this project, please follow these steps:
 
-### Additional Configuration
+1. **Fork the repository:**
 
-If there are any additional configuration steps required, such as setting up environment variables, include them here.
+   Click the "Fork" button at the top right corner of this repository to create a copy of the repository on your GitHub account.
 
-### Usage
+2. **Clone the repository:**
 
-Provide instructions on how to use the application once it is up and running.
+   ```sh
+   git clone https://github.com/ghofarsidik/Peworld.git
+   ```
 
-### Running Tests
+3. **Create a new branch:**
 
-If your project includes tests, provide instructions on how to run them:
+   ```sh
+   git checkout -b feature/your-feature-name
+   ```
 
-```sh
-npm test
-```
+4. **Make your changes:**
 
-### Deployment
+   Make the necessary changes to the codebase.
 
-Provide instructions on how to deploy the project to a live environment.
+5. **Commit your changes:**
 
-### Troubleshooting
+   ```sh
+   git commit -m "Add your commit message here"
+   ```
 
-Include common issues and their solutions to help users troubleshoot any problems they might encounter.
+6. **Push to the branch:**
+
+   ```sh
+   git push origin feature/your-feature-name
+   ```
+
+7. **Create a Pull Request:**
+
+   Open a pull request to the main repository and provide a detailed description of your changes.
+
+Thank you for your contributions!
+
+
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+
+### Contact
+
+For any inquiries or questions, you can reach me at:
+
+- Email: [ghofarassidik@gmail.com](mailto:ghofarassidik@gmail.com)
+- LinkedIn: [Abdul Ghaffar Sidik](https://www.linkedin.com/in/abdul-ghaffar-sidik/)
+
+
+### Documentation
+
+The backend project was created by [Muhammad Risano](https://github.com/muhammadrisano) using Express.js. For the backend link, you can visit [Be_Peworld](https://github.com/ghofarsidik/Be_Peworld).
+
 
 ### Related Project
