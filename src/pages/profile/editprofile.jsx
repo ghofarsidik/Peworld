@@ -7,8 +7,8 @@ import ProfileCard from '../../components/module/editProfile/profileCard';
 import EditProfileData from '../../components/module/editProfile/profileData';
 import ProfileSkillList from '../../components/module/editProfile/profileSkillList';
 import ProfileExperience from '../../components/module/editProfile/profileExperience';
+import Loading from '../../components/base/Loading';
 import ProfilePortofolio from '../../components/module/editProfile/profilePortofolio';
-import { ClipLoader } from 'react-spinners'; // Import ClipLoader dari react-spinners
 
 const EditProfile = () => {
   const [user, setUser] = useState();
@@ -114,10 +114,8 @@ const EditProfile = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen">
-        <ClipLoader size={50} color={"#123abc"} loading={loading} />
-      </div>
-    ); // Tampilkan loading saat data sedang dimuat
+      <Loading loading={loading} />
+    );
   }
 
   return (

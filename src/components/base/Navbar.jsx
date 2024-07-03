@@ -6,7 +6,7 @@ import imail from "../images/logo/mail.png";
 import ibell from "../images/logo/bell.png";
 import noPhoto from "../images/logo/user.svg";
 import api from "../../configs/api";
-// import { jwtDecode } from "jwt-decode";
+import Notification from '../module/notification';
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ className }) => {
@@ -59,7 +59,6 @@ const Navbar = ({ className }) => {
         const response = await api.get(url);
         const data = response.data.data;
         setUserPhoto(data.photo);
-        // setId(data.id);
         console.log("user data: ", data);
       } catch (error) {
         console.error("Error fetching profile data:", error);
@@ -95,7 +94,7 @@ const Navbar = ({ className }) => {
   return (
     <nav
       className={`flex w-full h-[100px] justify-between items-center mx-auto my-auto py-5 ${
-        token ? "px-[150px]" : "px-[30px] md:px-[150px]"
+        token ? "px-[30px] md:px-[150px]" : "px-[30px] md:px-[150px]"
       } bg-white ${className} shadow-lg`}
     >
       <NavLink to="/">
@@ -106,89 +105,21 @@ const Navbar = ({ className }) => {
           <>
             <li className="relative">
               <img
-                className="m-5 h-6 w-6 cursor-pointer"
+                className="m-2 md:m-5 h-6 w-6 cursor-pointer"
                 src={ibell}
                 alt=""
                 onClick={toggleBellDropdown}
               />
               {isBellDropdownOpen && (
-                <ul className="absolute right-0 mt-2 w-96 bg-white shadow-lg rounded-md">
-                  <li className="block px-4 py-2 hover:bg-gray-200">
-                    {role === "recruiter" ? (
-                      <>
-                        {hire.length === 0
-                          ? "Belum ada pesan"
-                          : hire.map((item, index) => (
-                              <div
-                                key={index}
-                                className="w-full border-y"
-                              >
-                                <div className="flex px-5 pt-5 gap-5">
-                                  <div className="w-1/4">
-                                    <img
-                                      className="rounded-[50%]"
-                                      src={item.worker_photo || noPhoto}
-                                    />
-                                  </div>
-                                  <div className="w-3/4">
-                                    <p className="font-medium text-sm leading-6">
-                                      You're hiring a job to{" "}
-                                      {item.worker_name || `Someone`}, now
-                                      waiting for response.
-                                    </p>
-                                    <h3 className="font-normal text-sm my-2">
-                                      {timeSince(item.created_at)}
-                                    </h3>
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
-                      </>
-                    ) : (
-                      <>
-                        {hire.length === 0
-                          ? "Belum ada pesan"
-                          : hire.map((item, index) => (
-                              <div
-                                key={index}
-                                className="w-full border-y border-hirejob-frost"
-                              >
-                                <div className="flex px-5 pt-5 gap-5">
-                                  <div className="w-1/4">
-                                    <img
-                                      className="rounded-[50%]"
-                                      src={item.recruiter_photo || noPhoto}
-                                    />
-                                  </div>
-                                  <div className="w-3/4">
-                                    <p className="font-medium text-sm leading-6 text-hirejob-dark">
-                                      A recruiter from {item.recruiter_company}{" "}
-                                      has sent you a message about a{" "}
-                                      <span className="capitalize">
-                                        {item.message_purpose}
-                                      </span>
-                                      .
-                                    </p>
-                                    <h3 className="font-normal text-sm text-hirejob-gray my-2">
-                                      {timeSince(item.created_at)}
-                                    </h3>
-                                  </div>
-                                </div>
-                                <NavLink to="/hirelist"><button> Pesan lainnya</button></NavLink>
-                              </div>
-                            ))}
-                      </>
-                    )}
-                  </li>
-                </ul>
+                <Notification hire={hire} role={role} timeSince={timeSince} />
               )}
             </li>
             <li>
-              <img className="m-5 h-6 w-6" src={imail} alt="" />
+              <img className="m-2 md:m-5 h-6 w-6" src={imail} alt="" />
             </li>
             <li className="relative">
               <img
-                className="m-5 h-8 w-8 cursor-pointer object-cover rounded-full"
+                className="m-2 md:m-5 h-8 w-8 cursor-pointer object-cover rounded-full"
                 src={userPhoto || noPhoto}
                 alt=""
                 onClick={toggleDropdown}

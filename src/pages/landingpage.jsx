@@ -10,9 +10,25 @@ import { Link } from "react-router-dom"
 import Iharry from "../components/images/people/harry.png"
 import Iniall from "../components/images/people/niall.png"
 import Ilouis from "../components/images/people/louis.png"
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Landingpage() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: window.innerWidth < 768 ? 1 : 3,
+        slidesToScroll: 1,
+        centerMode: true, 
+        centerPadding: '20px',
+    };
+
+    window.addEventListener('resize', () => {
+        settings.slidesToShow = window.innerWidth < 768 ? 1 : 3;
+    });
+
     return (
         <Container className="bg-white font-Osans">
             <Navbar />
@@ -63,30 +79,30 @@ function Landingpage() {
                 </div>
 
                 <p className="font-semibold text-4xl text-center mt-6">Opini mereka tentang Peworld</p>
-                <div className="flex flex-wrap justify-evenly mt-10">
-                    <div className="shadow-lg hover:shadow-xl h-[437px] w-[339px] flex flex-col items-center p-8 text-center">
-                        <img className="w-[120px] h-[120px]  border-[#FBB0175E] border-8 rounded-full" src={Iharry} alt="" />
+                <Slider {...settings} className="mt-10">
+                    <div className="shadow-lg hover:shadow-xl h-[437px] w-[339px] flex flex-col items-center p-8 text-center ">
+                        <img className="w-[120px] h-[120px]  border-[#FBB0175E] border-8 rounded-full mx-auto" src={Iharry} alt="" />
                         <p className="font-Osans font-semibold text-[30px]">Harry Styles</p>
                         <p className="font-Osans text-lg text-abu-pj">Web developer</p>
                         <p className="font-Osans text-lg">Pengalaman menggunakan PeWorld sangat efisien dalam mencari talenta IT dengan fitur pencarian yang canggih dan filter yang dapat disesuaikan.</p>
                     </div>
-                    <div className="shadow-lg hover:shadow-xl h-[437px] w-[339px] flex flex-col items-center p-8 text-center">
-                        <img className="w-[120px] h-[120px]  border-[#FBB0175E] border-8 rounded-full" src={Iniall} alt="" />
+                    <div className="shadow-lg hover:shadow-xl h-[437px] w-[339px] flex flex-col items-center p-8 text-center ">
+                        <img className="w-[120px] h-[120px]  border-[#FBB0175E] border-8 rounded-full mx-auto" src={Iniall} alt="" />
                         <p className="font-Osans font-semibold text-[30px]">Niall Horan</p>
                         <p className="font-Osans text-lg text-abu-pj">Web developer</p>
                         <p className="font-Osans text-lg">Saya terkesan dengan diversitas dan kualitas talenta yang dapat saya temukan di PeWorld, dari berbagai latar belakang dan keahlian yang berbeda-beda.</p>
                     </div>
-                    <div className="shadow-lg hover:shadow-xl h-[437px] w-[339px] flex flex-col items-center p-8 text-center">
-                        <img className="w-[120px] h-[120px]  border-[#FBB0175E] border-8 rounded-full" src={Ilouis} alt="" />
+                    <div className="shadow-lg hover:shadow-xl h-[437px] w-[339px] flex flex-col items-center p-8 text-center ">
+                        <img className="w-[120px] h-[120px]  border-[#FBB0175E] border-8 rounded-full mx-auto" src={Ilouis} alt="" />
                         <p className="font-Osans font-semibold text-[30px]">Louis Tomlinson</p>
                         <p className="font-Osans text-lg text-abu-pj">Web developer</p>
                         <p className="font-Osans text-lg">Antarmuka PeWorld mudah digunakan dan memberikan pengalaman pengguna yang menyenangkan dalam menjelajahi profil talenta serta mengelola proses rekrutmen.</p>
                     </div>
-                </div>
+                </Slider>
 
-                <div className="bg-ungu-pj flex h-auto items-center justify-between px-[70px] py-4 rounded-lg rounded-tl-[40px] rounded-br-[40px] mt-14">
-                    <p className="text-3xl font-semibold font-Osans text-white max-w-[450px]">Segera temukan developer berbakat & terbaik di berbagai bidang keahlian</p>
-                    <div className="text-lg font-bold font-Osans p-5 bg-white border border-ungu-pj rounded h-fit w-fit text-ungu-pj">Mulai sekarang</div>
+                <div className="bg-ungu-pj flex h-auto items-center justify-between px-[20px] md:px-[70px] py-4 rounded-lg rounded-tl-[40px] rounded-br-[40px] mt-20">
+                    <p className="text-xl md:text-3xl font-semibold font-Osans text-white max-w-[450px]">Segera temukan developer berbakat & terbaik di berbagai bidang keahlian</p>
+                    <Link to="/home" className="text-base md:text-lg font-bold font-Osans p-5 bg-white border border-ungu-pj rounded h-fit w-fit text-ungu-pj">Mulai sekarang</Link>
                 </div>
             </div>
             <Footer />

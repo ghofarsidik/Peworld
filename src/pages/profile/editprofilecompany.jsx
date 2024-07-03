@@ -138,7 +138,7 @@ const EditProfileCompany = () => {
               <Input label="Nama perusahaan" name="company" onChange={handleChange} type="text" value={form.company} placeholder="Masukkan nama perusahaan" />
               <Input label="Jabatan" name="position" onChange={handleChange} type="text" value={form.position} placeholder="Masukkan jabatan" />
               <Input label="Kota" name="city" onChange={handleChange} type="text" value={form.city} placeholder="Masukkan kota" />
-              <label className="mb-2 font-semibold">Deskripsi singkat</label>
+              <label className="mb-2 text-abu-pj">Deskripsi singkat</label>
               <textarea
                 name="description"
                 onChange={handleChange}

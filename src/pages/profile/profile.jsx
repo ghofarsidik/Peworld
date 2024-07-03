@@ -7,12 +7,13 @@ import Portofolio from "./portofolio";
 import Experience from "./experience";
 import { useParams } from "react-router-dom";
 import noUser from "../../components/images/logo/user.svg";
+import Loading from "../../components/base/Loading"; // Import Loading component
 
 const Profile = () => {
   const { id } = useParams();
   const [profile, setProfile] = useState(null);
   const [skills, setSkills] = useState([]);
-  const [activeTab, setActiveTab] = useState("portofolio"); // Default tab portofolio
+  const [activeTab, setActiveTab] = useState("portofolio");
 
   useEffect(() => {
     const getProfile = async () => {
@@ -55,7 +56,7 @@ const Profile = () => {
   }, [id]);
 
   if (!profile) {
-    return <div>Loading...</div>; // Loading indicator
+    return <Loading />; // Use Loading component
   }
 
   return (

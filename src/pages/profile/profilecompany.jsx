@@ -39,19 +39,35 @@ function Profilecompany() {
     <Container>
     <Navbar />
 
-    <div className="h-fit bg-white rounded flex flex-col px-[30px]  pb-8 font-Osans space-y-4 mx-[150px] mt-8 text-center items-center">
-                    <img className="w-[150px] h-[150px] mt-[30px] mx-auto" src={recruiter.photo || noPhoto} alt={recruiter.name} />
-                    <p className="text-[22px] font-semibold">{recruiter.company}</p>
+    <div className="h-fit bg-white rounded flex flex-col px-4 md:px-[30px] pb-8 font-Osans space-y-4 mx-4 md:mx-[150px] mt-8 text-center items-center">
+                    <img className="w-[100px] h-[100px] md:w-[150px] md:h-[150px] mt-[30px] mx-auto" src={recruiter.photo || noPhoto} alt={recruiter.name} />
+                    <p className="text-[18px] md:text-[22px] font-semibold">{recruiter.company}</p>
                     <p className="text-sm">{recruiter.position}</p>
-                    <p className="text-sm text-abu-pj flex"><img className="w-[14px] h-[14px] mr-3" src={imap} alt="" />{recruiter.city}</p>
-                    <p className="text-sm text-abu-pj max-w-[614px]">{recruiter.description}</p>
-                    <button onClick={handleButtonEdit} className="text-base font-bold h-[50px] x-auto bg-ungu-pj text-white rounded my-10 w-[297px]">Edit profile</button>
+                    <p className="text-sm text-abu-pj flex justify-center items-center"><img className="w-[14px] h-[14px] mr-3" src={imap} alt="" />{recruiter.city}</p>
+                    <p className="text-sm text-abu-pj max-w-full md:max-w-[614px]">{recruiter.description}</p>
+                    <button onClick={handleButtonEdit} className="text-base font-bold h-[50px] mx-auto bg-ungu-pj text-white rounded my-10 w-full md:w-[297px]">Edit profile</button>
       
-                    <div className="pt-3">
-                        <p className="flex text-sm text-abu-pj mb-5"><img className="mr-5" src={imail} alt="" />{recruiter.email} </p>
-                        <p className="flex text-sm text-abu-pj mb-5"><img className="mr-5" src={instagram} alt="" />{recruiter.instagram}</p>
-                        <p className="flex text-sm text-abu-pj mb-5"><img className="mr-5" src={iphone} alt="" />{recruiter.phone}</p>
-                        <p className="flex text-sm text-abu-pj mb-24"><img className="mr-5" src={ilinkedin} alt="" />{recruiter.linkedin} </p>
+                    <div className="pt-3 w-full flex justify-center">
+                        <table className="table-auto text-left">
+                            <tbody>
+                                <tr className="text-sm text-abu-pj mb-5 items-center">
+                                    <td className="pr-5"><img className="mr-5" src={imail} alt="" /></td>
+                                    <td>{recruiter.email}</td>
+                                </tr>
+                                <tr className="text-sm text-abu-pj mb-5 items-center">
+                                    <td className="pr-5"><img className="mr-5" src={instagram} alt="" /></td>
+                                    <td>{recruiter.instagram}</td>
+                                </tr>
+                                <tr className="text-sm text-abu-pj mb-5 items-center">
+                                    <td className="pr-5"><img className="mr-5" src={iphone} alt="" /></td>
+                                    <td>{recruiter.phone}</td>
+                                </tr>
+                                <tr className="text-sm text-abu-pj mb-24 items-center">
+                                    <td className="pr-5"><img className="mr-5" src={ilinkedin} alt="" /></td>
+                                    <td>{recruiter.linkedin}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     
                 </div>
