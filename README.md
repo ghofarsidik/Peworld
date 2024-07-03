@@ -94,162 +94,162 @@ Make sure you have the following installed on your local machine:
 
 Here is the screen display of the Peworld:
 
-<table>
+<table style="width: 100%;">
   <tr>
-    <td><strong>Landing Page Before Login</strong></td>
-    <td><strong>Landing Page After Login</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Landing Page Before Login</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Landing Page After Login</strong></td>
   </tr>
   <tr>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Landing%20Page%20before%20Login.png" alt="Landing Page Before Login">
       </details>
     </td>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/landing%20Page%20After%20login.png" alt="Landing Page After Login">
       </details>
     </td>
   </tr>
   <tr>
-    <td><strong>Login</strong></td>
-    <td><strong>Register Worker</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Login</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Register Worker</strong></td>
   </tr>
   <tr>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Login.png" alt="Login">
       </details>
     </td>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Register%20Worker.png" alt="Register Worker">
       </details>
     </td>
   </tr>
   <tr>
-    <td><strong>Register Recruiter</strong></td>
-    <td><strong>Profile Worker + Portfolio</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Register Recruiter</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Profile Worker + Portfolio</strong></td>
   </tr>
   <tr>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Register%20Recruiter.png" alt="Register Recruiter">
       </details>
     </td>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20worker%20%2B%20portofolio.png" alt="Profile Worker + Portfolio">
       </details>
     </td>
   </tr>
   <tr>
-    <td><strong>Profile Worker + Experience</strong></td>
-    <td><strong>Edit Profile Worker</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Profile Worker + Experience</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Edit Profile Worker</strong></td>
   </tr>
   <tr>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20worker%20%2B%20experience.png" alt="Profile Worker + Experience">
       </details>
     </td>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/edit%20profile%20worker.png" alt="Edit Profile Worker">
       </details>
     </td>
   </tr>
   <tr>
-    <td><strong>Profile Recruiter</strong></td>
-    <td><strong>Edit Profile Recruiter</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Profile Recruiter</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Edit Profile Recruiter</strong></td>
   </tr>
   <tr>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20recruiter.png" alt="Profile Recruiter">
       </details>
     </td>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/edit%20profile%20recruiter.png" alt="Edit Profile Recruiter">
       </details>
     </td>
   </tr>
   <tr>
-    <td><strong>Home</strong></td>
-    <td><strong>Detail Profile + Portfolio from Worker</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Home</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Detail Profile + Portfolio from Worker</strong></td>
   </tr>
   <tr>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Home.png" alt="Home">
       </details>
     </td>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20and%20portofolio%20from%20worker.png" alt="Detail Profile + Portfolio from Worker">
       </details>
     </td>
   </tr>
   <tr>
-    <td><strong>Detail Profile + Experience from Worker</strong></td>
-    <td><strong>Detail Profile + Portfolio from Recruiter</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Detail Profile + Experience from Worker</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Detail Profile + Portfolio from Recruiter</strong></td>
   </tr>
   <tr>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20and%20experience%20from%20worker.png" alt="Detail Profile + Experience from Worker">
       </details>
     </td>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20%2B%20portofolio%20from%20recruiter.png">
       </details>
     </td>
   </tr>
   <tr>
-    <td><strong>Detail Profile + Experience from Recruiter</strong></td>
-    <td><strong>Hire</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Detail Profile + Experience from Recruiter</strong></td>
+    <td style="width: 50%; text-align: center;"><strong>Hire</strong></td>
   </tr>
   <tr>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20%2B%20experience%20from%20recruiter.png">
       </details>
     </td>
-    <td>
+    <td style="width: 50%;">
       <details>
-        <summary>Show/Hide Image</summary>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br>
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/hire.png" alt="Hire">
       </details>
