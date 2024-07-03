@@ -101,18 +101,18 @@ Here is the screen display of the Peworld:
   </tr>
   <tr>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Landing%20Page%20before%20Login.png" alt="Landing Page Before Login">
-      </details>
+      <!-- </details> -->
     </td>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/landing%20Page%20After%20login.png" alt="Landing Page After Login">
-      </details>
+      <!-- </details> -->
     </td>
   </tr>
   <tr>
@@ -121,18 +121,18 @@ Here is the screen display of the Peworld:
   </tr>
   <tr>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Login.png" alt="Login">
-      </details>
+      <!-- </details> -->
     </td>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Register%20Worker.png" alt="Register Worker">
-      </details>
+      <!-- </details> -->
     </td>
   </tr>
   <tr>
@@ -141,18 +141,18 @@ Here is the screen display of the Peworld:
   </tr>
   <tr>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Register%20Recruiter.png" alt="Register Recruiter">
-      </details>
+      <!-- </details> -->
     </td>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20worker%20%2B%20portofolio.png" alt="Profile Worker + Portfolio">
-      </details>
+      <!-- </details> -->
     </td>
   </tr>
   <tr>
@@ -161,18 +161,18 @@ Here is the screen display of the Peworld:
   </tr>
   <tr>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20worker%20%2B%20experience.png" alt="Profile Worker + Experience">
-      </details>
+      <!-- </details> -->
     </td>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/edit%20profile%20worker.png" alt="Edit Profile Worker">
-      </details>
+      <!-- </details> -->
     </td>
   </tr>
   <tr>
@@ -181,18 +181,18 @@ Here is the screen display of the Peworld:
   </tr>
   <tr>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20recruiter.png" alt="Profile Recruiter">
-      </details>
+      <!-- </details> -->
     </td>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/edit%20profile%20recruiter.png" alt="Edit Profile Recruiter">
-      </details>
+      <!-- </details> -->
     </td>
   </tr>
   <tr>
@@ -201,18 +201,18 @@ Here is the screen display of the Peworld:
   </tr>
   <tr>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Home.png" alt="Home">
-      </details>
+      <!-- </details> -->
     </td>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20and%20portofolio%20from%20worker.png" alt="Detail Profile + Portfolio from Worker">
-      </details>
+      <!-- </details> -->
     </td>
   </tr>
   <tr>
@@ -221,18 +221,18 @@ Here is the screen display of the Peworld:
   </tr>
   <tr>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20and%20experience%20from%20worker.png" alt="Detail Profile + Experience from Worker">
-      </details>
+      <!-- </details> -->
     </td>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20%2B%20portofolio%20from%20recruiter.png">
-      </details>
+      <!-- </details> -->
     </td>
   </tr>
   <tr>
@@ -241,18 +241,18 @@ Here is the screen display of the Peworld:
   </tr>
   <tr>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/detail%20profile%20%2B%20experience%20from%20recruiter.png">
-      </details>
+      <!-- </details> -->
     </td>
     <td style="width: 50%;">
-      <details>
+      <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
-        <br>
+        <br> -->
         <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/hire.png" alt="Hire">
-      </details>
+      <!-- </details> -->
     </td>
   </tr>
 </table>
