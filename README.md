@@ -184,7 +184,7 @@ Here is the screen display of the Peworld:
       <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br> -->
-        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/profile%20recruiter.png" alt="Profile Recruiter">
+        <img src="https://github.com/ghofarsidik/Peworld/blob/dd88a1901df562f06e8be973ff39845041643373/src/components/images/screenshot/profile%20recruiter%202.png" alt="Profile Recruiter">
       <!-- </details> -->
     </td>
     <td style="width: 50%;">
