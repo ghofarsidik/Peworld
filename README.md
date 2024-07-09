@@ -88,6 +88,16 @@ Make sure you have the following installed on your local machine:
    npm start
    ```
 
+6. **Testing Accounts:**
+
+   For worker, you can use:
+   - Email: jimmy@gmail.com
+   - Password: Jimmy_1234
+
+   For recruiter, you can use:
+   - Email: royalbumi@gmail.com
+   - Password: Royalbumi_1234
+
 
 
 ### Screenshots
