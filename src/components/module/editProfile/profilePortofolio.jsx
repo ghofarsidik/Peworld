@@ -261,7 +261,7 @@ const ProfilePortfolio = () => {
                     </div>
                     <div className="flex flex-col">
                       <button
-                        className="text-blue-500"
+                        className="text-ungu-pj"
                         onClick={() => handleEditClick(portfolio)}
                       >
                         Ubah

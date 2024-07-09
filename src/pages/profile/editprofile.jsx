@@ -74,7 +74,7 @@ const EditProfile = () => {
 
       console.log(response.data);
       alert('Selamat berhasil mengedit profil');
-      navigate(`/profile`); // Navigate back to the profile page using user.id
+      navigate(`/profile`); 
     } catch (error) {
       console.error('Error editing profile:', error);
       alert('Anda gagal mengedit profil');

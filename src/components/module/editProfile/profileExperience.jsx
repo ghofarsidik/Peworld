@@ -242,7 +242,7 @@ const ProfileExperience = () => {
                     </div>
                     <div>
                       <button
-                        className="text-orange-pj text-[16px]"
+                        className="text-ungu-pj text-[16px]"
                         onClick={() => handleEditClick(exp)}
                       >
                         Ubah
