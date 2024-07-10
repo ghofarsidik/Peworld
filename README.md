@@ -161,7 +161,7 @@ Here is the screen display of the Peworld:
       <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br> -->
-        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/profile%20worker%20%2B%20portofolio%202.png">
+        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/profile%20worker%20%2B%20portofolio%20(2).png">
       <!-- </details> -->
     </td>
   </tr>
@@ -174,7 +174,7 @@ Here is the screen display of the Peworld:
       <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br> -->
-        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/edit%20profile%20worker%20(2).png" alt="Profile Worker + Experience">
+        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/profile%20worker%20%2B%20experience%20(2).png" alt="Profile Worker + Experience">
       <!-- </details> -->
     </td>
     <td style="width: 50%;">
