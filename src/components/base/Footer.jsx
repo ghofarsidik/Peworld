@@ -8,8 +8,8 @@ function Footer() {
             <div className="h-[100px] border-t border-white flex justify-between items-center text-lg flex-col md:flex-row">
                 <p>2020 Pewworld. All right reserved</p>
                 <div className="flex space-x-[79px]">
-                    <p>Telepon</p>
-                    <p>Email</p>
+                    <a href="https://wa.me/6283804648095"><p>Telepon</p></a>
+                    <a href="mailto:peworld.id@gmail.com"><p>Email</p></a>
                 </div>
             </div>
         </div>
