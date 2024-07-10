@@ -71,7 +71,7 @@ const Profile = () => {
           name={profile.name}
           job_desk={profile.job_desk || "job desk belum di input"}
           domicile={profile.domicile || "domisili belum di input"}
-          workPlace={profile.workPlace || "Tempat kerja belum di input"}
+          workPlace={profile.workPlace || "Belum Bekerja"}
           description={profile.description || "Deskripsi belum di input"}
           skills={skills}
           email={profile.email || "email belum di input"}
