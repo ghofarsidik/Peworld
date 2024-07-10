@@ -214,7 +214,7 @@ Here is the screen display of the Peworld:
       <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br> -->
-        <img src="https://github.com/ghofarsidik/Peworld/blob/0c0ccdfe1eef842c81062ed8a3a3c531ce88a84f/src/components/images/screenshot/Home.png" alt="Home">
+        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/home%20(2).png" alt="Home">
       <!-- </details> -->
     </td>
     <td style="width: 50%;">
