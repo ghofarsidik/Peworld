@@ -37,7 +37,8 @@ const App = () => {
         <Route path="/hire" element={<PrivateRoute component={Hire} role={['recruiter']} />} />
         <Route path="/profilecompany" element={<PrivateRoute component={ProfileCompany} role={['recruiter']} />} />
         <Route path="/editprofilecompany" element={<PrivateRoute component={EditProfileCompany} role={['recruiter']} />} />
-        <Route path="/profile/:id" element={<PrivateRoute component={Profile} role={['worker', 'recruiter']} />} />
+        <Route path="/profile/:id" element={<Profile />} />
+        {/* <Route path="/profile/:id" element={<PrivateRoute component={Profile} role={['worker', 'recruiter']} />} />o */}
         <Route path="/profile" element={<PrivateRoute component={Profile} role={['worker', 'recruiter']} />} />
         <Route path="/hire/:id" element={<PrivateRoute component={Hire} role={['recruiter']} />} />
         <Route path="/hirelist" element={<PrivateRoute component={HireList} role={['worker', 'recruiter']} />} />
