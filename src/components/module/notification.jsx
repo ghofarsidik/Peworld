@@ -10,7 +10,7 @@ const Notification = ({ hire, role, timeSince }) => {
           <>
             {hire.length === 0
               ? "Belum ada pesan"
-              : hire.map((item, index) => (
+              : hire.slice(0, 2).map((item, index) => (
                   <div key={index} className="w-full border-y">
                     <div className="flex px-5 pt-5 gap-5">
                       <div className="w-1/4">
@@ -36,7 +36,7 @@ const Notification = ({ hire, role, timeSince }) => {
           <>
             {hire.length === 0
               ? "Belum ada pesan"
-              : hire.map((item, index) => (
+              : hire.slice(0, 2).map((item, index) => (
                   <div key={index} className="w-full border-y border-hirejob-frost">
                     <div className="flex px-5 pt-5 gap-5">
                       <div className="w-1/4">
