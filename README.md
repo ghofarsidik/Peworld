@@ -221,7 +221,7 @@ Here is the screen display of the Peworld:
       <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br> -->
-        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/detail%20profile%20%2B%20portofolio%20from%20worker.png" alt="Detail Profile + Portfolio from Worker">
+        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/detail%20profile%20%2B%20portofolio%20from%20worker%20(2).png" alt="Detail Profile + Portfolio from Worker">
       <!-- </details> -->
     </td>
   </tr>
@@ -241,7 +241,7 @@ Here is the screen display of the Peworld:
       <!-- <details>
         <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
         <br> -->
-        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/detail%20profile%20%2B%20portofolio%20from%20recruiter.png">
+        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/detail%20profile%20%2B%20portofolio%20from%20recruiter%20(2).png">
       <!-- </details> -->
     </td>
   </tr>
