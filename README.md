@@ -265,6 +265,20 @@ Here is the screen display of the Peworld:
       <!-- </details> -->
     </td>
   </tr>
+  <tr>
+    <td style="width: 50%; text-align: center;"><strong>Notification</strong></td>
+    <td style="width: 50%; text-align: center;"></td>
+  </tr>
+  <tr>
+    <td style="width: 50%;">
+      <!-- <details>
+        <summary style="text-align: left; vertical-align: top;">Show/Hide Image</summary>
+        <br> -->
+        <img src="https://github.com/ghofarsidik/Peworld/blob/main/src/components/images/screenshot/notification.png" alt="Notification">
+      <!-- </details> -->
+    </td>
+    <td style="width: 50;"></td>
+  </tr>
 </table>
 
 ### Contributing
